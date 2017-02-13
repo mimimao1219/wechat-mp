@@ -19,6 +19,8 @@ router.use('/do', wechat('666888',wechat.text(function(message,req,res,next){
 	api.sendText(message.FromUserName,"<a href='xx.xxx'>test<\/a>",function(err,result){console.log(result)});
 	res.reply("<a href='drop'>test<\/a>");
 }).image(function(message,req,res,next){
+	console.log(message);
+	res.reply('ssss');
 }).voice(function(message,req,res,next){
 }).video(function(message,req,res,next){
 }).location(function(message,req,res,next){
